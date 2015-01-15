@@ -15,7 +15,8 @@ public:
 	int getBottom() const{
 		return bottom;
 	}
-
+	
+	void print() const;
 	//mutator
 	int setTop(int newTop);
 	int setBottom(int newBottom);
