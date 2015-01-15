@@ -1,5 +1,6 @@
 #include "Bone.h"
-
+#include <iostream>
+using namespace std;
 
 Bone::Bone()
 {
@@ -15,3 +16,9 @@ top(top), bottom(bottom)
 Bone::~Bone()
 {
 }
+void Bone::print() const 
+{
+	cout << endl;
+	cout << top << " " << bottom << endl;
+}
+
