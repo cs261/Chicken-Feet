@@ -16,7 +16,7 @@ bool Hand::removeBone(int pos, Bone*& abone){
 	if(pos < || pos >= hand.size())
 		return false;
 	abone = hand.at(pos);
-	hand.erase(hand.begin + pos);
+	hand.erase(hand.begin() + pos);
 	return true;
 
 }
