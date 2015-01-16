@@ -1,4 +1,9 @@
 #pragma once
+
+#include <iostream>
+
+using namespace std;
+
 class Bone
 {
 public:
@@ -8,27 +13,26 @@ public:
 	~Bone();
 
 	//accessor
-	int getTop() const{
-		return top;
-	}
+	int    getTop() const;
+	int    getBottom() const;
+	bool   getIsDouble() const;
+	bool   getTopUsed() const;
+	bool   getBottomUsed() const;
 
-	int getBottom() const{
-		return bottom;
-	}
-	
-	void print() const;
 	//mutator
-	int setTop(int newTop);
-	int setBottom(int newBottom);
-	bool setIsDouble();
-	bool setTopUsed();
-	bool setBottomUsed();
+	void   setTop(int newTop);
+	void   setBottom(int newBottom);
+	void   setIsDouble(bool);
+	void   setTopUsed(bool);
+	void   setBottomUsed(bool);
+
+	void print() const;
 
 private:
-	int top;
-	int bottom;
-	bool isDouble;
-	bool topUsed;
-	bool bottomUsed;
+	int    top;
+	int    bottom;
+	bool   isDouble;
+	bool   topUsed;
+	bool   bottomUsed;
 
 };
