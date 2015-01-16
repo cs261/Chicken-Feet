@@ -27,5 +27,3 @@ Void print() const {
 	}
 	cout << endl << endl;
 }
-+	cout << endl << endl;
-+}
