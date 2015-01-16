@@ -1,4 +1,3 @@
-#pragma once
 
 #include <iostream>
 #include <vector>
@@ -9,27 +8,21 @@ using namespace std;
 class Yard
 {
 public:
-	Yard(int players, int bones);
+	Yard(int players);
 	~Yard();
 
-	void shuffleDeck();
-	bool deal(Bone* &abone);
-	void print();
-	int getBoneCount() const{
-		return boneCount;
-	}
+	//void shuffleDeck();
+	//bool deal(Bone* &abone);
+	void print() const;
 	int getPlayerCount() const{
 		return playerCount;
 	}
-	void setBoneCount(int newCount);
-	void setPlayerCount(int newCount);
+	//void setPlayerCount(int newCount);
 	
 
 private:
-	Bone card;
-	vector<Bone*> Deck;
+	vector<Bone*> deck;
 
-	int boneCount; //keep track of available bones in deck
 	int playerCount; 
 };
 
