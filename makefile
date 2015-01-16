@@ -14,7 +14,7 @@ bone.o: Bone.cpp
 
 yard.o: Yard.cpp
 	$(CC) $(CFLAGS) Yard.cpp Yard.h
-
+//somethings wrong in the clean b/c it leaves too much in the dir
 clean:
 	rm -rf *o chicken
 
