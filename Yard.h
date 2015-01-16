@@ -11,18 +11,16 @@ public:
 	Yard(int players);
 	~Yard();
 
-	//void shuffleDeck();
-	//bool deal(Bone* &abone);
+	void shuffleDeck();
+	bool deal(Bone* &aBone);
 	void print() const;
 	int getPlayerCount() const{
 		return playerCount;
 	}
 	//void setPlayerCount(int newCount);
 	
-
 private:
 	vector<Bone*> deck;
 
 	int playerCount; 
 };
-
