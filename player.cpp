@@ -35,5 +35,5 @@ void Player::print() const
 	hand.print();
 	cout << endl;
 
-	cout << "Current points in hand: " << hand.getPlayerScore() << endl;
+	cout << "Current points in hand: " << hand.getHandScore() << endl;
 }
