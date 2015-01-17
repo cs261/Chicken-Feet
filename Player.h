@@ -1,30 +1,31 @@
-#pragma once
+#ifndef PLAYER_H
+#define PLAYER_H
 
+#include "bone.h"
+#include "hand.h"
+#include "yard.h"
 #include <iostream>
-#include "Yard.h"
-#include "Bone.h"
-#include <vector>
 
 using namespace std;
+
 class Player
 {
 public:
+	//contructors
 	Player();
+
+	//destructor
 	~Player();
 
-	bool drawCard(Yard* yard);
-	bool playBone(Bone* &aBone);
-	int getScore(){
-		return currScore;
-	}
-	void setCurrScore(int newScore);
-	void print();
+	//mutator functions
+	bool drawBone(Yard * yard);
+	bool playBone(Bone*& aBone);
 
+	//accessor functions 
+	void print() const;
 
 private:
-
-	//instance of hand class goes here
-	int currScore;
-
+	Hand hand;
 };
 
+#endif;
