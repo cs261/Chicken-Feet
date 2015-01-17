@@ -34,4 +34,6 @@ void Player::print() const
 	cout << endl << "Bones in hand: ";
 	hand.print();
 	cout << endl;
+
+	cout << "Current points in hand: " << hand.getPlayerScore() << endl;
 }
