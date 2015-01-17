@@ -1,21 +1,34 @@
 #ifndef HAND_H
 #define HAND_H
 
-#include "card.h"
+#include "bone.h"
 #include <vector>
 #include <iostream>
 
 using namespace std;
 
-class Hand{
+class Hand
+{
 public:
+
+	//constructors
 	Hand();
+
+	//destructor
 	~Hand();
 
-	void addBone(Bones *aBone);
+	//mutator functions
+	void addBone(Bone* aBone);
 	bool removeBone(int pos, Bone*& aBone);
+	
+	//accessor function
 	void print() const;
+	int getPlayerScore() const;
+
 private:
 	vector<Bone*> hand;
+	int playerScore;
+	
 };
-#endif
+
+#endif;
