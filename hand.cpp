@@ -1,27 +1,56 @@
-#include<iostream>
-#include"hand.h"
+#include <iostream>
+#include <vector>
+#include "hand.h"
 
-Hand::Hand(){}
-Hand:: ~Hand(){
-	for(auto it = hand.begin(); it != hand.end(); it++){
+using namespace std;
+
+//constructor/destructor
+Hand::Hand() : playerScore(0){}
+
+Hand::~Hand()
+{
+	for (auto it = hand.begin(); it != hand.end(); it++)
+	{
 		delete *it;
 	}
 }
 
-void Hand::addBone(Bone * bone){
-	hand.push_back(bone);
+//mutator functions
+void Hand::addBone(Bone* aBone)
+{
+	hand.push_back(aBone);
+
+	int top = aBone->getTop();
+	int bottom = aBone->getBottom();
+
+	playerScore += top + bottom;
 }
 
-bool Hand::removeBone(int pos, Bone*& abone){
-	if(pos < || pos >= hand.size())
+bool Hand::removeBone(int pos, Bone*& aBone)
+{
+	if (pos < 0 || pos >= hand.size())
 		return false;
-	abone = hand.at(pos);
+	aBone = hand.at(pos);
 	hand.erase(hand.begin() + pos);
-	return true;
 
+	int top = aBone->getTop();
+	int bottom = aBone->getBottom();
+
+	playerScore -= top + bottom;
+
+	return true;	 
 }
-Void print() const {
-	for(auto it = hand.cbegin(); it != hand.cend(); it++){
+
+//accessor function
+int Hand::getPlayerScore() const
+{
+	return playerScore;
+}
+
+void Hand::print() const
+{
+	for (auto it = hand.cbegin(); it != hand.cend(); it++)
+	{
 		(*it)->print();
 		cout << " ";
 	}
