@@ -23,11 +23,11 @@ public:
 	
 	//accessor function
 	void print() const;
-	int getPlayerScore() const;
+	int getHandScore() const;
 
 private:
 	vector<Bone*> hand;
-	int playerScore;
+	int handScore;
 	
 };
 

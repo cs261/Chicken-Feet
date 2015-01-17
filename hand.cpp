@@ -23,7 +23,7 @@ void Hand::addBone(Bone* aBone)
 	int top = aBone->getTop();
 	int bottom = aBone->getBottom();
 
-	playerScore += top + bottom;
+	handScore += top + bottom;
 }
 
 bool Hand::removeBone(int pos, Bone*& aBone)
@@ -36,15 +36,15 @@ bool Hand::removeBone(int pos, Bone*& aBone)
 	int top = aBone->getTop();
 	int bottom = aBone->getBottom();
 
-	playerScore -= top + bottom;
+	handScore -= top + bottom;
 
 	return true;	 
 }
 
 //accessor function
-int Hand::getPlayerScore() const
+int Hand::getHandScore() const
 {
-	return playerScore;
+	return handScore;
 }
 
 void Hand::print() const
