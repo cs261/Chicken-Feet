@@ -5,7 +5,7 @@
 using namespace std;
 
 //constructor/destructor
-Hand::Hand() : playerScore(0){}
+Hand::Hand() : handScore(0){}
 
 Hand::~Hand()
 {
