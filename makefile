@@ -1,3 +1,4 @@
+//g++ -std=c++11 -o chicken Yard.h Yard.cpp Bone.h Bone.cpp driver.cpp
 CC=g++
 CFLAGS=-c -Wall -std=c++11
 
