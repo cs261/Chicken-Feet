@@ -29,11 +29,14 @@ bool Player::playBone(Bone*& aBone)
 }
 
 //accessor functions
-void Player::print() const
+void Player::getScore() const
 {
-	cout << endl << "Bones in hand: ";
-	hand.print();
-	cout << endl;
+	cout << "Player score: " << hand.getHandScore() << endl << endl;
+}
 
-	cout << "Current points in hand: " << hand.getHandScore() << endl;
+void Player::getHand() const
+{
+	cout << "Bones in hand: " << endl;
+	hand.print();
+	cout << endl << endl;
 }

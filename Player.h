@@ -21,8 +21,9 @@ public:
 	bool drawBone(Yard * yard);
 	bool playBone(Bone*& aBone);
 
-	//accessor functions 
-	void print() const;
+	//accessor functions
+	void getScore() const;
+	void getHand() const;
 
 private:
 	Hand hand;
