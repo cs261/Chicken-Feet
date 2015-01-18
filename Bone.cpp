@@ -60,6 +60,5 @@ void Bone::setBottomUsed(bool newBool){
 
 void Bone::print() const
 {
-	cout << endl;
-	cout << top << " " << bottom << endl;
+	cout << " |" << top << "|" << bottom << "| ";
 }
