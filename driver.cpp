@@ -38,22 +38,24 @@ int main()
 	aHand->removeBone(0, aBone);
 	aHand->removeBone(1, aBone);
 	
-	cout << "Hand after removing: ";
+	cout << "Hand after removing: " << endl;
 	aHand->print();
 	
-	cout << "Player1 draws 5 bones: " << endl;
+	cout << endl << "Player1 draws 5 bones: " << endl;
 	Player * player1 = new Player();
 	for(int i = 0; i < 5; i++){
 		player1->drawBone(yard);
 	}
-	player1->print();
-	
-	cout << "Player1 plays a bone: ";
+	player1->getHand();
+	cout << endl << "Player1 plays a bone: ";
 	player1->playBone(aBone);
 	aBone->print();
 	
-	cout << "Player1's Hand after playing: " << endl;
-	player1->print();
+	cout << endl << "Player1's Hand after playing: " << endl;
+	player1->getHand();
+	
+	cout << endl << "Player1's Score";
+	player1->getScore();
 	
 	return 0;
 }
