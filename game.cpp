@@ -22,7 +22,7 @@ void Game::run(){
 		options(ch);
 		}while(ch != toUpper("p") || ch != toUpper("d"));
 
-	}while(player[currTurn].getScore() > 0 && Yard.isEmpty());
+	}while(player.at(currTurn)->getScore() > 0 && Yard.isEmpty());
 	getTurn();
 }
 
