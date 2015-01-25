@@ -26,7 +26,7 @@ void Game::run(){
 	getTurn();
 }
 
-Game::start(){
+void Game::start(){
 	cout << "Welcome to Chicken-Feet the game!!" << endl;
 	cout << "please enter how many players will play: ";
 	cin  >> nPlayers;
@@ -44,13 +44,13 @@ Game::start(){
 		}
 	}
 }
-Game::display(){
+void Game::display(){
 	cout << "Press (H) to show hand" << endl;
 	cout << "Press (P) to play a Bone" << endl;
 	cout << "Press (D) to draw a Bone" << endl;
 	cout << "Press (S) to see your Score" << endl;
 }
-Game::option(ch){
+void Game::option(ch){
 	switch(ch){
 		case 'H':
 			player.at(currTurn)->getHand();
