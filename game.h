@@ -7,7 +7,12 @@ private:
 public:
 	Game(int nPlayers);
 	Game(int nPlayers, int nRounds);
+	
 	void run();
+	void start();
+	void display();
+	void options(ch);
+	
 	int getTurn(){ return (currTurn++ % players); };
 	int setTurn(int start);
 };
